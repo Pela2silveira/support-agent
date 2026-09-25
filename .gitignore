@@ -1,0 +1,198 @@
+# ============================================================
+
+# Python
+
+# ============================================================
+
+**pycache**/
+*.py[cod]
+*$py.class
+
+*.so
+
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Coverage
+
+.coverage
+.coverage.*
+htmlcov/
+.pytest_cache/
+.tox/
+.nox/
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+
+# Type checkers / linters
+
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.pytype/
+.ruff_cache/
+
+# ============================================================
+
+# Virtual environments
+
+# ============================================================
+
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# ============================================================
+
+# Environment / secrets
+
+# ============================================================
+
+.env
+.env.*
+!.env.example
+
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Local credentials / tokens
+
+credentials.yaml
+credentials.yml
+secrets.yaml
+secrets.yml
+secrets.json
+
+# ============================================================
+
+# Project-local runtime data
+
+# ============================================================
+
+data/
+runtime/
+tmp/
+logs/
+
+*.log
+*.pid
+
+# Local diagnostic output
+
+diagnostic-results/
+reports/
+
+# ============================================================
+
+# OS
+
+# ============================================================
+
+.DS_Store
+.AppleDouble
+.LSOverride
+
+Thumbs.db
+ehthumbs.db
+
+# ============================================================
+
+# Editors / IDEs
+
+# ============================================================
+
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# VS Code local configuration
+
+.vscode/settings.json
+.vscode/launch.json
+.vscode/tasks.json
+
+# ============================================================
+
+# Jupyter
+
+# ============================================================
+
+.ipynb_checkpoints/
+
+# ============================================================
+
+# Local tooling
+
+# ============================================================
+
+.mise/
+.direnv/
+
+# ============================================================
+
+# Temporary files
+
+# ============================================================
+
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# ============================================================
+
+# Terraform - future compatibility
+
+# ============================================================
+
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+
+# ============================================================
+
+# Generated documentation / artifacts
+
+# ============================================================
+
+site/
+public/
+
+# ============================================================
+
+# Local test / development files
+
+# ============================================================
+
+test-output/
+*.out
+*.result
