@@ -116,7 +116,7 @@ docker compose --env-file .env up -d fortigate-exporter prometheus grafana
 
 ## Access
 
-- Grafana: http://localhost:3000 (dashboard **PACS**)
+- Grafana: http://localhost:${GRAFANA_PORT:-3001} (dashboard **PACS**)
   - Admin: `GRAFANA_ADMIN_USER` / `GRAFANA_ADMIN_PASSWORD`
   - Viewer (solo PACS): `GRAFANA_VIEWER_USER` / `GRAFANA_VIEWER_PASSWORD` (`./grafana/ensure-viewer.sh`)
 - Prometheus: http://localhost:9090
