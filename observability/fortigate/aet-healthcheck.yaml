@@ -1,0 +1,20 @@
+# AET -> SD-WAN health-check (+ optional member interface names)
+#
+# Format:
+#   AET: health_check
+#   AET: health_check,interface_m1,interface_m2
+#
+# interface_* = label "interface" on fortigate_virtual_wan_status
+# (not the FortiGate member sequence number). Check Prometheus:
+#   fortigate_virtual_wan_status{sla="<health_check>"}
+#
+# Aggregate sdwan = UP if any member is up.
+# Columns m1 / m2 = status of each listed interface.
+
+PACSHMM: mmoreno,mmoreno,OpticP2P
+# PACSHA: ...
+PACSHBA: bajada,bajada,OpticP2P
+PACSHLC: lascolo,lascolo,OpticP2P
+PACSHRDLS: rdls,OpticP2P,rdls
+PACSHTM: Tricao,OpticP2P,Tricao
+PACSHVT: traful,OpticP2P,traful
