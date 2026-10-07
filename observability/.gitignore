@@ -1,0 +1,9 @@
+.env
+.env.*
+!.env.example
+
+# Generated / local secrets (never commit)
+fortigate/fortigate-key.yaml
+fortigate/aet-healthcheck.yaml
+prometheus/file_sd/*.yml
+prometheus/rules/sss-sdwan.yml

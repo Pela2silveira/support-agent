@@ -1,0 +1,7 @@
+dependencies:
+  - from: hospital-alumine/imaging/pacs
+    to: hospital-alumine/network/ipsec
+  - from: hospital-alumine/imaging/dicom
+    to: hospital-alumine/network/ipsec
+  - from: hospital-alumine/network/ipsec
+    to: central/network/ipsec

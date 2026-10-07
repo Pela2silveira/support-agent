@@ -1,0 +1,14 @@
+# AET -> SD-WAN health-check (+ optional member interface names)
+#
+# Copy to aet-healthcheck.yaml (gitignored) and fill real values:
+#   cp fortigate/aet-healthcheck.yaml.example fortigate/aet-healthcheck.yaml
+#
+# Format:
+#   AET: health_check
+#   AET: health_check,interface_m1,interface_m2
+#
+# interface_* = label "interface" on fortigate_virtual_wan_status
+#
+# Aggregate sdwan = UP if any member is up.
+
+# PACSEXAMPLE: healthcheck-name,iface1,iface2

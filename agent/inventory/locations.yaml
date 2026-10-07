@@ -1,0 +1,33 @@
+locations:
+  - id: hospital-alumine
+    type: location
+    children:
+      - id: network
+        type: system
+        children:
+          - id: dns
+            type: service
+            children:
+              - id: primary
+                type: component
+          - id: ipsec
+            type: service
+            children:
+              - id: remote
+                type: component
+                secret_key: CENTRAL_NETWORK_IPSEC_REMOTE_HOST
+      - id: pacs
+        type: system
+        children:
+          - id: pacs
+            type: service
+            children:
+              - id: orthanc
+                type: component
+                secret_key: ALUMINE_PACS_HOST
+          - id: dicom
+            type: service
+            children:
+              - id: dicom-server
+                type: component
+                secret_key: ALUMINE_DICOM_SERVER_HOST

@@ -1,0 +1,6 @@
+"https://10.x.x.x":
+  token: CHANGE_ME
+  probes:
+    include:
+      - System/Status
+      - VirtualWAN/HealthCheck

@@ -22,6 +22,25 @@ The first MVP will focus exclusively on a local CLI executed from a cloned Git r
 
 The architecture must allow Telegram, remote execution, agents, Ansible, and other execution mechanisms to be added later without redesigning the core domain model.
 
+## Environment and secrets
+
+The project must keep public topology in Git and sensitive runtime values outside Git.
+
+This includes:
+
+* hostnames and IP addresses for production systems
+* credentials and tokens
+* internal endpoint references
+* any environment-specific operational data
+
+The recommended pattern is:
+
+- `.env` for local development
+- a secret manager for shared or production deployments
+- `.env.example` as the tracked template for required keys
+
+Secrets are loaded at runtime and never committed to version control.
+
 ---
 
 # 2. Core Concepts
