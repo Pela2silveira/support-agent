@@ -444,18 +444,18 @@
         "type": "prometheus",
         "uid": "prometheus"
       },
-      "description": "Por AET: \u00faltimo valor en el rango del time picker. MWL y estudios del d\u00eda correspondiente a ese rango (exporter publica el total absoluto del d\u00eda en cada collect). Fuera MWL en rojo cuando Estudios \u2260 Worklist.",
+      "description": "Por AET: \u00faltimo valor en el rango del time picker. MWL y estudios del d\u00eda correspondiente a ese rango (exporter publica el total absoluto del d\u00eda en cada collect). Fuera en rojo cuando Estudios \u2260 WL.",
       "fieldConfig": {
         "defaults": {
           "color": {
             "mode": "thresholds"
           },
           "custom": {
-            "align": "auto",
+            "align": "center",
             "cellOptions": {
               "type": "auto"
             },
-            "filterable": true,
+            "filterable": false,
             "inspect": false
           },
           "thresholds": {
@@ -476,15 +476,15 @@
             },
             "properties": [
               {
-                "id": "custom.width",
-                "value": 160
+                "id": "custom.align",
+                "value": "left"
               }
             ]
           },
           {
             "matcher": {
               "id": "byName",
-              "options": "MWL acumulado"
+              "options": "MWL"
             },
             "properties": [
               {
@@ -514,7 +514,7 @@
           {
             "matcher": {
               "id": "byName",
-              "options": "Fuera MWL"
+              "options": "Fuera"
             },
             "properties": [
               {
@@ -550,8 +550,8 @@
         ]
       },
       "gridPos": {
-        "h": 16,
-        "w": 10,
+        "h": 12,
+        "w": 24,
         "x": 0,
         "y": 5
       },
@@ -561,10 +561,10 @@
         "footer": {
           "countRows": false,
           "fields": [
-            "MWL acumulado",
+            "MWL",
             "Estudios",
-            "Worklist",
-            "Fuera MWL"
+            "WL",
+            "Fuera"
           ],
           "reducer": [
             "sum"
@@ -575,7 +575,7 @@
         "sortBy": [
           {
             "desc": true,
-            "displayName": "MWL acumulado"
+            "displayName": "MWL"
           }
         ]
       },
@@ -671,24 +671,24 @@
             },
             "renameByName": {
               "aet": "AET",
-              "Value #mwl": "MWL acumulado",
+              "Value #mwl": "MWL",
               "Value #estudios": "Estudios",
-              "Value #worklist": "Worklist",
-              "Value #A": "MWL acumulado",
+              "Value #worklist": "WL",
+              "Value #A": "MWL",
               "Value #B": "Estudios",
-              "Value #C": "Worklist",
-              "Value": "MWL acumulado"
+              "Value #C": "WL",
+              "Value": "MWL"
             }
           }
         },
         {
           "id": "calculateField",
           "options": {
-            "alias": "Fuera MWL",
+            "alias": "Fuera",
             "binary": {
               "left": "Estudios",
               "operator": "-",
-              "right": "Worklist"
+              "right": "WL"
             },
             "mode": "binary",
             "reduce": {
@@ -711,11 +711,11 @@
             "mode": "thresholds"
           },
           "custom": {
-            "align": "auto",
+            "align": "center",
             "cellOptions": {
               "type": "auto"
             },
-            "filterable": true,
+            "filterable": false,
             "inspect": false
           },
           "mappings": [],
@@ -730,6 +730,18 @@
           }
         },
         "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "AET"
+            },
+            "properties": [
+              {
+                "id": "custom.align",
+                "value": "left"
+              }
+            ]
+          },
           {
             "matcher": {
               "id": "byName",
@@ -778,32 +790,16 @@
                     }
                   ]
                 }
-              },
-              {
-                "id": "custom.width",
-                "value": 100
-              }
-            ]
-          },
-          {
-            "matcher": {
-              "id": "byName",
-              "options": "AET"
-            },
-            "properties": [
-              {
-                "id": "custom.width",
-                "value": 140
               }
             ]
           }
         ]
       },
       "gridPos": {
-        "h": 16,
-        "w": 5,
-        "x": 10,
-        "y": 5
+        "h": 14,
+        "w": 8,
+        "x": 0,
+        "y": 17
       },
       "id": 31,
       "options": {
@@ -874,11 +870,11 @@
             "mode": "thresholds"
           },
           "custom": {
-            "align": "auto",
+            "align": "center",
             "cellOptions": {
               "type": "auto"
             },
-            "filterable": true,
+            "filterable": false,
             "inspect": false
           },
           "mappings": [],
@@ -893,6 +889,30 @@
           }
         },
         "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "AET"
+            },
+            "properties": [
+              {
+                "id": "custom.align",
+                "value": "left"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Interface"
+            },
+            "properties": [
+              {
+                "id": "custom.align",
+                "value": "left"
+              }
+            ]
+          },
           {
             "matcher": {
               "id": "byName",
@@ -941,22 +961,6 @@
                     }
                   ]
                 }
-              },
-              {
-                "id": "custom.width",
-                "value": 100
-              }
-            ]
-          },
-          {
-            "matcher": {
-              "id": "byName",
-              "options": "AET"
-            },
-            "properties": [
-              {
-                "id": "custom.width",
-                "value": 140
               }
             ]
           },
@@ -975,10 +979,10 @@
         ]
       },
       "gridPos": {
-        "h": 16,
-        "w": 9,
-        "x": 15,
-        "y": 5
+        "h": 14,
+        "w": 16,
+        "x": 8,
+        "y": 17
       },
       "id": 32,
       "options": {
@@ -1079,7 +1083,7 @@
   "timezone": "America/Argentina/Buenos_Aires",
   "title": "PACS",
   "uid": "sss-pacs",
-  "version": 26,
+  "version": 28,
   "weekStart": "",
   "description": "Monitoreo PACS por sitio. Secci\u00f3n actual: PACSSSS."
 }
